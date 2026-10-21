@@ -1,19 +1,27 @@
 # Portfolio – Nikola Vojvodić
 
-Statički sajt bez build koraka. Sve je u ovom folderu:
+Statički sajt bez build koraka, objavljen na **https://nikolxdev.github.io**.
 
 ```
 index.html                 portfolio (stilovi i skripte su u fajlu)
 img/                       slike projekata
-projekti/knjigoteka/       Knjigoteka uživo (dugme "Live pregled")
-projekti/last-ember/       Last Ember uživo
-preuzimanje/*.zip          izvorni kod za dugme "Preuzmi kod"
 cv/Nikola_Vojvodic_CV.pdf  CV za dugmad "CV" (zameni fajl istim imenom kad ga ažuriraš)
 ```
 
+## Projekti
+
+Svaki projekat ima svoj repozitorijum i svoj sajt na GitHub Pages, koji se sam ažurira posle svakog `git push`. Portfolio samo linkuje na njih:
+
+| Projekat | Live | Kod |
+|---|---|---|
+| Knjigoteka | https://nikolxdev.github.io/knjigoteka/ | https://github.com/nikolxdev/knjigoteka |
+| Last Ember | https://nikolxdev.github.io/last-ember/ | https://github.com/nikolxdev/last-ember |
+
+Kad menjaš neki projekat, menjaš ga u njegovom repozitorijumu. Ovde treba nešto promeniti samo ako se promeni opis projekta ili slika.
+
 ## Objavljivanje
 
-Sajt nema build korak: ceo sadržaj ovog foldera samo se postavi na hosting (preko panela hostinga ili FTP-a), tako da `index.html` bude u korenu domena. Folderi `projekti/`, `img/`, `preuzimanje/` i `cv/` moraju ostati pored njega.
+Repozitorijum se zove `nikolxdev.github.io`, a sajt se objavljuje iz grane `main` (Settings → Pages → Deploy from a branch → `main`, `/ (root)`). Posle `git push` sajt se osveži za minut-dva.
 
 ## Kontakt forma
 
@@ -24,14 +32,5 @@ Forma šalje poruke preko Formspree-a (`https://formspree.io/f/mppqglyp`). Poruk
 - Srpski tekst je direktno u `index.html`, engleski prevod je u objektu `EN` u skripti na dnu fajla. Sadržaj prozora `nikola.js` je u objektu `CODE`.
 - Projekti i alati su u `index.html`.
 - Boje tamne teme su u `:root`, svetle u `:root[data-mode="light"]` na vrhu `<style>`.
-- Novi projekat: kopiraj jedan `<article class="proj">` blok, ubaci folder u `projekti/` i zip u `preuzimanje/`. Projekti se smenjuju levo-desno: svaki drugi `<article>` ima klasu `flip`.
+- Novi projekat: kopiraj jedan `<article class="proj">` blok, dodaj slike u `img/` (desktop 1600×1000, telefon 500×1082, format `.webp`) i upiši linkove ka sajtu i repozitorijumu. Projekti se smenjuju levo-desno: svaki drugi `<article>` ima klasu `flip`.
 - U tabeli alata (`TOOLS` u skripti) slova u poslednjoj koloni govore u kom projektu se alat vidi: K = Knjigoteka, L = Last Ember.
-- Kad menjaš Knjigoteku, povećaj `VERSION` u `projekti/knjigoteka/sw.js` da instalirane kopije dobiju novu verziju.
-
-## Napomena za Knjigoteku
-
-Kopija u `projekti/knjigoteka/` je spakovana tako da radi i kad se sajt otvori dvoklikom na `index.html`: svi JavaScript moduli su spojeni u `js/app.bundle.js`, a fontovi su ugrađeni u `css/app.css`. Originalni kod sa modulima je u `preuzimanje/knjigoteka.zip`. Kad menjaš Knjigoteku, ponovo napravi bundle:
-
-```bash
-npx esbuild js/app.js --bundle --format=iife --target=es2020 --outfile=js/app.bundle.js
-```
