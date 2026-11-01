@@ -1,3 +1,5 @@
+/* © 2026 Nikola Vojvodić · https://nikolxdev.github.io/ · All rights reserved, see LICENSE. [nv:75f96b7b26] */
+
 const FORM_URL = "https://formspree.io/f/mppqglyp";
 const CV_URL = "cv/Nikola_Vojvodic_CV.pdf";
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -37,7 +39,7 @@ const EN = {
   "mo.f4": "A harvest calendar based on today's date and a bag that is remembered",
   "mo.f5": "8 Playwright tests on desktop and mobile, with no retries for failed tests",
   "ab.eyebrow": "Who I am", "ab.title": "About me",
-  "ab.p1": "I'm <strong>Nikola Vojvodić</strong>, a full-stack developer from Čačak, Serbia, with a degree in Information Technology (Faculty of Technical Sciences Čačak, 2026). I build complete, working web applications in JavaScript, from <strong>offline-first PWAs</strong> to interactive websites.",
+  "ab.p1": "I'm <strong>Nikola Vojvodić</strong>, a full-stack developer from Čačak, Serbia, with a degree in Information Technology (Faculty of Technical Sciences Čačak, 2026). I build complete, working web applications in JavaScript, from <strong>offline-first PWAs</strong> to <strong>interactive 3D sites</strong> and websites for local businesses.",
   "ab.p2": "I build every project from scratch, with attention to clean code, <strong>accessibility and automated testing</strong>. Every project on this page has a live version and its full source code on GitHub, and the tests run automatically on every change.",
   "ab.k1": "Role", "ab.v1": "Full-stack developer", "ab.k2": "Location", "ab.v2": "Čačak, Serbia",
   "ab.k6": "Education", "ab.v6": "Information Technology, Faculty of Technical Sciences Čačak (2022–2026). Bachelor thesis on PWAs, graded 10/10.",
@@ -324,8 +326,8 @@ $("#ed-code").addEventListener("pointerleave", () => inspect(null));
 
 const PROJECTS = { K: ["Knjigoteka", "#p-knjigoteka"], L: ["Last Ember", "#p-last-ember"], M: ["Morrow", "#p-morrow"] };
 const TOOLS = [
-  { name: "React", area: "core", used: "", sr: "komponente, hooks, state", en: "components, hooks, state" },
   { name: "JavaScript", area: "core", used: "KLM", sr: "ES2022+, moduli, async", en: "ES2022+, modules, async" },
+  { name: "React", area: "core", used: "", sr: "komponente, hooks, state", en: "components, hooks, state" },
   { name: "Tailwind CSS", area: "core", used: "", sr: "utility klase, teme", en: "utility classes, theming" },
   { name: "HTML5", area: "core", used: "KLM", sr: "semantika, pristupačnost", en: "semantics, accessibility" },
   { name: "CSS3", area: "core", used: "KLM", sr: "grid, flexbox, animacije", en: "grid, flexbox, animations" },
@@ -695,3 +697,16 @@ console.log(
   "%c👋 Hej, developeru!%c\nOvaj sajt radi bez frejmvorka i bez build koraka. Kod: https://github.com/nikolxdev/nikolxdev.github.io\nHi there! No framework, no build step. Source: https://github.com/nikolxdev/nikolxdev.github.io\nTip: Ctrl + K → sudo hire nikola",
   "font: 700 16px system-ui; color: #4d8dff;", "font: 12px ui-monospace, monospace; color: #8794b4;"
 );
+
+(function () {
+  var HOMES = ["nikolxdev.github.io", "localhost", "127.0.0.1", "[::1]", ""];
+  var host = location.hostname;
+  if (HOMES.indexOf(host) > -1 || /\.localhost$/.test(host)) return;
+  var link = document.createElement("a");
+  link.className = "nv-original";
+  link.href = "https://nikolxdev.github.io/";
+  link.textContent = "Original work by Nikola Vojvodić";
+  link.setAttribute("data-nv", "nv:75f96b7b26");
+  document.body.appendChild(link);
+  console.warn("This page is a copy of work by Nikola Vojvodić (© 2026, all rights reserved): https://nikolxdev.github.io/ [nv:75f96b7b26]");
+})();

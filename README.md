@@ -1,39 +1,20 @@
-# Portfolio – Nikola Vojvodić
+# Portfolio
 
-Statički sajt bez build koraka, objavljen na **https://nikolxdev.github.io**.
+Moj portfolio sajt: https://nikolxdev.github.io
 
-```
-index.html                 struktura stranice (HTML) i meta tagovi za pregled linka
-css/style.css              svi stilovi, obe teme
-js/main.js                 sva logika: prevodi, editor, paleta, tema, animacije, forma
-img/                       slike projekata, fotografija i og.jpg (slika za pregled linka)
-cv/Nikola_Vojvodic_CV.pdf  CV za dugmad "CV" (zameni fajl istim imenom kad ga ažuriraš)
-```
+Običan HTML, CSS i JavaScript, bez build koraka. Objavljuje se preko GitHub Pages iz grane `main`.
 
-## Projekti
+- `index.html` – stranica
+- `css/style.css` – stilovi (tamna i svetla tema)
+- `js/main.js` – prevodi, editor, paleta komandi, forma
+- `img/` – slike projekata
+- `cv/` – CV
 
-Svaki projekat ima svoj repozitorijum i svoj sajt na GitHub Pages, koji se sam ažurira posle svakog `git push`. Portfolio samo linkuje na njih:
+Projekti su u svojim repozitorijumima:
+[Morrow](https://github.com/nikolxdev/morrow) ·
+[Knjigoteka](https://github.com/nikolxdev/knjigoteka) ·
+[Last Ember](https://github.com/nikolxdev/last-ember)
 
-| Projekat | Live | Kod |
-|---|---|---|
-| Knjigoteka | https://nikolxdev.github.io/knjigoteka/ | https://github.com/nikolxdev/knjigoteka |
-| Last Ember | https://nikolxdev.github.io/last-ember/ | https://github.com/nikolxdev/last-ember |
-| Morrow | https://nikolxdev.github.io/morrow/ | https://github.com/nikolxdev/morrow |
+## License
 
-Kad menjaš neki projekat, menjaš ga u njegovom repozitorijumu. Ovde treba nešto promeniti samo ako se promeni opis projekta ili slika.
-
-## Objavljivanje
-
-Repozitorijum se zove `nikolxdev.github.io`, a sajt se objavljuje iz grane `main` (Settings → Pages → Deploy from a branch → `main`, `/ (root)`). Posle `git push` sajt se osveži za minut-dva.
-
-## Kontakt forma
-
-Forma šalje poruke preko Formspree-a (`https://formspree.io/f/mppqglyp`). Poruke stižu na mejl kojim si napravio Formspree nalog. Prvu poruku sa novog domena Formspree može tražiti da potvrdiš.
-
-## Kako da menjaš
-
-- Srpski tekst je direktno u `index.html`, engleski prevod je u objektu `EN` u `js/main.js`. Sadržaj editora (`nikola.js`, `projects.json`, `README.md`) je u objektu `FILES` u `js/main.js`.
-- Projekti su u `index.html`, a lista alata je u nizu `TOOLS` u `js/main.js`.
-- Boje tamne teme su u `:root`, svetle u `:root[data-mode="light"]` na vrhu `css/style.css`.
-- Novi projekat: kopiraj jedan `<article class="proj">` blok, dodaj slike u `img/` (desktop 1600×1000, telefon 500×1082, format `.webp`) i upiši linkove ka sajtu i repozitorijumu. Projekti se smenjuju levo-desno: svaki drugi `<article>` ima klasu `flip`.
-- Svaki alat u `TOOLS` ima polje `used` sa slovima projekata u kojima se vidi: K = Knjigoteka, L = Last Ember, M = Morrow. Glavni alati imaju `area: "core"`.
+© 2026 Nikola Vojvodić. All rights reserved. The code is public so it can be read and evaluated as part of my portfolio; it is not open source. See [LICENSE](LICENSE) for what is and isn't allowed.
