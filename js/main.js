@@ -17,6 +17,13 @@ const EN = {
   "k.move": "move", "k.run": "open", "k.close": "close",
   "proj.eyebrow": "What I've built", "proj.title": "Projects", "proj.lead": "Open any project live and browse its full source code.",
   "btn.live": "Live preview", "btn.gh": "Code on GitHub",
+  "re.altm": "Rebound, picking a time slot on a phone", "re.meta": "2026 · full-stack · booking system",
+  "re.desc": "Court booking for a made-up padel club in Čačak. Pick a court, a day and a time, and you get a booking code and a cancel link. Staff have their own page with the day's schedule. The server is on a free plan, so the first visit after a break takes about half a minute.",
+  "re.f1": "Two bookings on the same court can't overlap. The database itself checks it, even when two people click in the same second",
+  "re.f2": "Staff schedule: drag bookings to move them, block courts for tournaments. The demo login is shown on the sign-in page",
+  "re.f3": "Prices depend on the time of day, and times follow the Belgrade time zone, including the daylight saving switch",
+  "re.f4": "Cancel through a link up to 2 hours before. Emails go through Resend, in the demo they only reach me",
+  "re.f5": "16 tests in GitHub Actions, the API tests run against a real PostgreSQL database",
   "k.altm": "Knjigoteka on a phone", "k.meta": "2026 · PWA · bachelor thesis, graded 10/10",
   "k.desc": "A progressive web app for searching books in the Open Library catalogue and keeping a personal reading shelf. It works offline and installs on phone and desktop like a native app.",
   "k.f1": "Search with filters, sorting and shareable links",
@@ -39,7 +46,7 @@ const EN = {
   "mo.f4": "A harvest calendar based on today's date and a bag that is remembered",
   "mo.f5": "8 Playwright tests on desktop and mobile, with no retries for failed tests",
   "ab.eyebrow": "Who I am", "ab.title": "About me",
-  "ab.p1": "I'm <strong>Nikola Vojvodić</strong>, a full-stack developer from Čačak, Serbia, with a degree in Information Technology (Faculty of Technical Sciences Čačak, 2026). I build complete, working web applications in JavaScript, from <strong>offline-first PWAs</strong> to <strong>interactive 3D sites</strong> and websites for local businesses.",
+  "ab.p1": "I'm <strong>Nikola Vojvodić</strong>, a full-stack developer from Čačak, Serbia, with a degree in Information Technology (Faculty of Technical Sciences Čačak, 2026). I build complete, working web applications in JavaScript, from <strong>booking systems</strong> with their own server and database, through <strong>offline-first PWAs</strong>, to <strong>interactive 3D sites</strong> and websites for local businesses.",
   "ab.p2": "I build every project from scratch, with attention to clean code, <strong>accessibility and automated testing</strong>. Every project on this page has a live version and its full source code on GitHub, and the tests run automatically on every change.",
   "ab.k1": "Role", "ab.v1": "Full-stack developer", "ab.k2": "Location", "ab.v2": "Čačak, Serbia",
   "ab.k6": "Education", "ab.v6": "Information Technology, Faculty of Technical Sciences Čačak (2022–2026). Bachelor thesis on PWAs, graded 10/10.",
@@ -152,6 +159,9 @@ export default nikola;`
   projects: {
     kind: "JSON",
     en: `[
+  { "name": "Rebound",
+    "type": "full-stack booking app",
+    "tests": 16 },
   { "name": "Knjigoteka",
     "type": "offline-first PWA",
     "tests": 74 },
@@ -165,6 +175,9 @@ export default nikola;`
 
 // click a name to jump to the project`,
     sr: `[
+  { "name": "Rebound",
+    "type": "full-stack rezervacije",
+    "tests": 16 },
   { "name": "Knjigoteka",
     "type": "offline-first PWA",
     "tests": 74 },
@@ -187,7 +200,7 @@ I build web apps that are fast,
 accessible and covered by tests.
 
 ## Right now
-- Working on a new full-stack project
+- Just shipped [Rebound](#p-rebound)
 
 ## Contact
 - [Send a message](#kontakt)
@@ -199,14 +212,14 @@ web aplikacije koje su brze, pristupačne
 i pokrivene testovima.
 
 ## Trenutno
-- Radim na novom full-stack projektu
+- Upravo završen [Rebound](#p-rebound)
 
 ## Kontakt
 - [Pošalji poruku](#kontakt)
 - [GitHub](github.com/nikolxdev)`
   }
 };
-const PROJECT_LINKS = { '"Knjigoteka"': "#p-knjigoteka", '"Last Ember"': "#p-last-ember", '"Morrow"': "#p-morrow" };
+const PROJECT_LINKS = { '"Rebound"': "#p-rebound", '"Knjigoteka"': "#p-knjigoteka", '"Last Ember"': "#p-last-ember", '"Morrow"': "#p-morrow" };
 
 const CODE_TOKENS = /(\/\/.*)|("[^"]*"?)(?=\s*:)|("[^"]*"?)|\b(const|export|default)\b|\b(true|false|\d+)\b|([\p{L}_]+)(?=:)|([{}[\],;:=])/gu;
 
@@ -324,34 +337,37 @@ $("#ed-code").addEventListener("pointerover", e => {
 });
 $("#ed-code").addEventListener("pointerleave", () => inspect(null));
 
-const PROJECTS = { K: ["Knjigoteka", "#p-knjigoteka"], L: ["Last Ember", "#p-last-ember"], M: ["Morrow", "#p-morrow"] };
+const PROJECTS = { R: ["Rebound", "#p-rebound"], K: ["Knjigoteka", "#p-knjigoteka"], L: ["Last Ember", "#p-last-ember"], M: ["Morrow", "#p-morrow"] };
 const TOOLS = [
   { name: "JavaScript", area: "core", used: "KLM", sr: "ES2022+, moduli, async", en: "ES2022+, modules, async" },
-  { name: "React", area: "core", used: "", sr: "komponente, hooks, state", en: "components, hooks, state" },
-  { name: "Tailwind CSS", area: "core", used: "", sr: "utility klase, teme", en: "utility classes, theming" },
-  { name: "HTML5", area: "core", used: "KLM", sr: "semantika, pristupačnost", en: "semantics, accessibility" },
+  { name: "React", area: "core", used: "R", sr: "komponente, hooks, state", en: "components, hooks, state" },
+  { name: "Tailwind CSS", area: "core", used: "R", sr: "utility klase, teme", en: "utility classes, theming" },
+  { name: "HTML5", area: "core", used: "KLMR", sr: "semantika, pristupačnost", en: "semantics, accessibility" },
   { name: "CSS3", area: "core", used: "KLM", sr: "grid, flexbox, animacije", en: "grid, flexbox, animations" },
   { name: "Three.js", area: "web", used: "M", sr: "3D scena, materijali, svetla", en: "3D scenes, materials, lights" },
+  { name: "GSAP", area: "web", used: "R", sr: "animacije, ScrollTrigger", en: "animations, ScrollTrigger" },
   { name: "PWA", area: "web", used: "K", sr: "manifest, instalacija, offline", en: "manifest, install, offline" },
   { name: "Service Worker", area: "web", used: "K", sr: "Cache API, ažuriranja", en: "Cache API, updates" },
   { name: "REST API", area: "web", used: "K", sr: "fetch, greške, keš", en: "fetch, errors, cache" },
   { name: "i18n", area: "web", used: "KL", sr: "prevodi, Intl", en: "translations, Intl" },
-  { name: "TypeScript", area: "web", used: "", sr: "tipovi, deljeni API ugovori", en: "types, shared API contracts" },
-  { name: "SQL", area: "data", used: "", sr: "upiti, šeme", en: "queries, schemas" },
+  { name: "TypeScript", area: "web", used: "R", sr: "tipovi, deljeni API ugovori", en: "types, shared API contracts" },
+  { name: "SQL", area: "data", used: "R", sr: "upiti, šeme", en: "queries, schemas" },
+  { name: "PostgreSQL", area: "data", used: "R", sr: "šeme, transakcije, ograničenja u bazi", en: "schemas, transactions, database constraints" },
+  { name: "Express", area: "data", used: "R", sr: "REST API, middleware, validacija", en: "REST APIs, middleware, validation" },
   { name: "SQLite", area: "data", used: "", sr: "migracije, indeksi, transakcije", en: "migrations, indexes, transactions" },
   { name: "Fastify", area: "data", used: "", sr: "REST API, validacija", en: "REST APIs, validation" },
-  { name: "Node.js", area: "data", used: "K", sr: "API serveri, skripte", en: "API servers, scripts" },
+  { name: "Node.js", area: "data", used: "KR", sr: "API serveri, skripte", en: "API servers, scripts" },
   { name: "Python", area: "data", used: "", sr: "skripte", en: "scripting" },
   { name: "Playwright", area: "qa", used: "KM", sr: "end-to-end testovi, i na telefonu", en: "end-to-end tests, on mobile too" },
   { name: "node:test", area: "qa", used: "K", sr: "40 unit testova", en: "40 unit tests" },
   { name: "axe-core", area: "qa", used: "K", sr: "automatska provera pristupačnosti", en: "automated accessibility checks" },
-  { name: "Vitest", area: "qa", used: "", sr: "unit i API testovi", en: "unit and API tests" },
+  { name: "Vitest", area: "qa", used: "R", sr: "unit i API testovi", en: "unit and API tests" },
   { name: "WCAG 2.1", area: "qa", used: "KLM", sr: "standard pristupačnosti", en: "accessibility standard" },
-  { name: "Git", area: "tool", used: "KLM", sr: "verzionisanje", en: "version control" },
-  { name: "GitHub", area: "tool", used: "KLM", sr: "repozitorijumi, PR", en: "repos, pull requests" },
-  { name: "GitHub Actions", area: "tool", used: "KM", sr: "CI, testovi na više verzija", en: "CI, multi-version test runs" },
+  { name: "Git", area: "tool", used: "KLMR", sr: "verzionisanje", en: "version control" },
+  { name: "GitHub", area: "tool", used: "KLMR", sr: "repozitorijumi, PR", en: "repos, pull requests" },
+  { name: "GitHub Actions", area: "tool", used: "KMR", sr: "CI, testovi na više verzija", en: "CI, multi-version test runs" },
   { name: "Docker", area: "tool", used: "", sr: "multi-stage image", en: "multi-stage images" },
-  { name: "npm", area: "tool", used: "KM", sr: "paketi, workspaces", en: "packages, workspaces" },
+  { name: "npm", area: "tool", used: "KMR", sr: "paketi, workspaces", en: "packages, workspaces" },
   { name: "VS Code", area: "tool", used: "", sr: "editor, debug", en: "editor, debugging" },
   { name: "Figma", area: "tool", used: "", sr: "dizajn, prototipovi", en: "design, prototypes" }
 ];
@@ -453,6 +469,8 @@ const COMMANDS = [
   { group: "nav", icon: "go", sr: "O meni", en: "About me", keys: "about bio", run: goTo("#o-meni") },
   { group: "nav", icon: "go", sr: "Alati i tehnologije", en: "Tools & technologies", keys: "stack skills vestine", run: goTo("#alati") },
   { group: "nav", icon: "go", sr: "Kontakt", en: "Contact", keys: "email poruka message", run: goTo("#kontakt") },
+  { group: "proj", icon: "box", sr: "Rebound", en: "Rebound", keys: "padel booking rezervacija full-stack", run: goTo("#p-rebound") },
+  { group: "proj", icon: "out", sr: "Rebound uživo", en: "Rebound live demo", keys: "padel booking demo rezervacija", hint: "↗", run: openUrl("https://nikolxdev.github.io/rebound/") },
   { group: "proj", icon: "box", sr: "Knjigoteka", en: "Knjigoteka", keys: "pwa books knjige", run: goTo("#p-knjigoteka") },
   { group: "proj", icon: "out", sr: "Knjigoteka uživo", en: "Knjigoteka live demo", keys: "pwa demo knjige", hint: "↗", run: openUrl("https://nikolxdev.github.io/knjigoteka/") },
   { group: "proj", icon: "box", sr: "Last Ember", en: "Last Ember", keys: "restaurant restoran burger", run: goTo("#p-last-ember") },

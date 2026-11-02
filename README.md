@@ -11,6 +11,7 @@ Običan HTML, CSS i JavaScript, bez build koraka. Objavljuje se preko GitHub Pag
 - `cv/` – CV
 
 Projekti su u svojim repozitorijumima:
+[Rebound](https://github.com/nikolxdev/rebound) ·
 [Morrow](https://github.com/nikolxdev/morrow) ·
 [Knjigoteka](https://github.com/nikolxdev/knjigoteka) ·
 [Last Ember](https://github.com/nikolxdev/last-ember)
