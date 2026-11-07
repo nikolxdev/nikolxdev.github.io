@@ -10,51 +10,46 @@ const escapeHtml = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", 
 
 const EN = {
   "nav.aria": "Navigation", "nav.home": "Nikola Vojvodić, home", "nav.projects": "Projects", "nav.about": "About", "nav.tools": "Tools", "nav.contact": "Contact",
-  "hero.avail": "Available for work", "hero.cta1": "View projects", "hero.cta2": "Send a message",
-  "hero.scroll": "Scroll down", "hero.scrollt": "Scroll", "f.toparia": "Back to top", "cv.dl": "Download CV",
+  "hero.avail": "Available for work", "hero.cta1": "View projects", "hero.cta2": "Send a message", "f.toparia": "Back to top", "cv.dl": "Download CV",
   "ed.aria": "Code editor", "ed.files": "Files",
   "k.open": "Command palette", "k.title": "Command palette", "k.ph": "Type a command or search…", "k.qaria": "Search commands", "k.list": "Commands",
-  "k.move": "move", "k.run": "open", "k.close": "close",
-  "proj.eyebrow": "What I've built", "proj.title": "Projects", "proj.lead": "Open any project live and browse its full source code.",
+  "k.move": "move", "k.run": "open", "k.close": "close", "proj.title": "Projects", "proj.lead": "Open any project live and browse its full source code.",
   "btn.live": "Live preview", "btn.gh": "Code on GitHub",
-  "re.altm": "Rebound, picking a time slot on a phone", "re.meta": "2026 · full-stack · booking system",
+  "re.altm": "Rebound, picking a time slot on a phone", "re.altd": "Rebound, home page", "re.meta": "Full-stack booking system, 2026",
   "re.desc": "Court booking for a made-up padel club in Čačak. Pick a court, a day and a time, and you get a booking code and a cancel link. Staff have their own page with the day's schedule. The server is on a free plan, so the first visit after a break takes about half a minute.",
   "re.f1": "Two bookings on the same court can't overlap. The database itself checks it, even when two people click in the same second",
   "re.f2": "Staff schedule: drag bookings to move them, block courts for tournaments. The demo login is shown on the sign-in page",
   "re.f3": "Prices depend on the time of day, and times follow the Belgrade time zone, including the daylight saving switch",
   "re.f4": "Cancel through a link up to 2 hours before. Emails go through Resend, in the demo they only reach me",
   "re.f5": "16 tests in GitHub Actions, the API tests run against a real PostgreSQL database",
-  "k.altm": "Knjigoteka on a phone", "k.meta": "2026 · PWA · bachelor thesis, graded 10/10",
+  "k.altm": "Knjigoteka on a phone", "k.altd": "Knjigoteka, home page", "k.meta": "PWA, bachelor thesis graded 10/10, 2026",
   "k.desc": "A progressive web app for searching books in the Open Library catalogue and keeping a personal reading shelf. It works offline and installs on phone and desktop like a native app.",
   "k.f1": "Search with filters, sorting and shareable links",
   "k.f2": "A shelf drawn as a real bookcase, with ratings, notes and reading stats",
   "k.f3": "Service worker with three caching strategies, fully usable offline",
   "k.f4": "Light and dark theme, Serbian and English interface",
   "k.f5": "40 unit and 34 end-to-end tests, with automated accessibility checks and a real offline run",
-  "le.altm": "Last Ember on a phone", "le.meta": "2026 · restaurant website · concept",
+  "le.altm": "Last Ember on a phone", "le.altd": "Last Ember, home page", "le.meta": "Restaurant website concept, 2026",
   "le.desc": "A website for a late-night burger bar in Belgrade, with a menu, cart and table booking. Everything runs in the browser, with no framework and no build step.",
   "le.f1": "A burger that builds itself as you scroll, with a static version for reduced motion",
   "le.f2": "Menu with search, filters, allergens and extras",
   "le.f3": "Cart with delivery, promo codes, tips and pickup time slots",
   "le.f4": "Table booking and a live open / closed status",
   "le.f5": "The whole site in English and Serbian",
-  "mo.altm": "Morrow on a phone", "mo.meta": "2026 · 3D web · brand concept",
+  "mo.altm": "Morrow on a phone", "mo.altd": "Morrow, home page", "mo.meta": "3D brand concept, 2026",
   "mo.desc": "A site for a fictional cold-pressed juice brand from the Morava valley. The cans are 3D, built in code with Three.js, with no ready-made models or photos.",
   "mo.f1": "A row of 3D cans: the middle one under a spotlight, the side ones darker, all reflected in the floor",
   "mo.f2": "Clicking a can turns it around and opens its details: taste, nutrition and price",
   "mo.f3": "An intro where the lights come on one by one, with a still image while the 3D loads",
   "mo.f4": "A harvest calendar based on today's date and a bag that is remembered",
-  "mo.f5": "8 Playwright tests on desktop and mobile, with no retries for failed tests",
-  "ab.eyebrow": "Who I am", "ab.title": "About me",
+  "mo.f5": "8 Playwright tests on desktop and mobile, with no retries for failed tests", "ab.title": "About me",
   "ab.p1": "I'm <strong>Nikola Vojvodić</strong>, a full-stack developer from Čačak, Serbia, with a degree in Information Technology (Faculty of Technical Sciences Čačak, 2026). I build complete, working web applications in JavaScript, from <strong>booking systems</strong> with their own server and database, through <strong>offline-first PWAs</strong>, to <strong>interactive 3D sites</strong> and websites for local businesses.",
   "ab.p2": "I build every project from scratch, with attention to clean code, <strong>accessibility and automated testing</strong>. Every project on this page has a live version and its full source code on GitHub, and the tests run automatically on every change.",
   "ab.k1": "Role", "ab.v1": "Full-stack developer", "ab.k2": "Location", "ab.v2": "Čačak, Serbia",
   "ab.k6": "Education", "ab.v6": "Information Technology, Faculty of Technical Sciences Čačak (2022–2026). Bachelor thesis on PWAs, graded 10/10.",
   "ab.k3": "Focus", "ab.v3": "PWAs, accessibility (WCAG 2.1), automated testing, React",
-  "ab.k4": "Languages", "ab.v4": "Serbian (native), English (professional working proficiency)",
-  "t.eyebrow": "What I use", "t.title": "Tools & technologies",
-  "t.lead": "My core stack up top, everything else grouped by area below. Each tool shows which project you can see it in.",
-  "c.eyebrow": "Say hello", "c.title": "Let's<br><span>talk.</span>",
+  "ab.k4": "Languages", "ab.v4": "Serbian (native), English (professional working proficiency)", "t.title": "Tools & technologies",
+  "t.lead": "My core stack up top, everything else grouped by area below. Each tool shows which project you can see it in.", "c.title": "Let's<br>talk.",
   "c.lead": "Got a job, a project or just a question? Send me a message and I'll reply within a day or two.", "c.copy": "Copy",
   "c.name": "Name", "c.nameph": "Your name", "c.emailph": "name@example.com", "c.subj": "Subject", "c.subjph": "Job, project, collaboration…",
   "c.msg": "Message", "c.msgph": "Tell me what it's about", "c.send": "Send message"
@@ -351,10 +346,8 @@ const TOOLS = [
   { name: "REST API", area: "web", used: "K", sr: "fetch, greške, keš", en: "fetch, errors, cache" },
   { name: "i18n", area: "web", used: "KL", sr: "prevodi, Intl", en: "translations, Intl" },
   { name: "TypeScript", area: "web", used: "R", sr: "tipovi, deljeni API ugovori", en: "types, shared API contracts" },
-  { name: "SQL", area: "data", used: "R", sr: "upiti, šeme", en: "queries, schemas" },
   { name: "PostgreSQL", area: "data", used: "R", sr: "šeme, transakcije, ograničenja u bazi", en: "schemas, transactions, database constraints" },
   { name: "Express", area: "data", used: "R", sr: "REST API, middleware, validacija", en: "REST APIs, middleware, validation" },
-  { name: "SQLite", area: "data", used: "", sr: "migracije, indeksi, transakcije", en: "migrations, indexes, transactions" },
   { name: "Fastify", area: "data", used: "", sr: "REST API, validacija", en: "REST APIs, validation" },
   { name: "Node.js", area: "data", used: "KR", sr: "API serveri, skripte", en: "API servers, scripts" },
   { name: "Python", area: "data", used: "", sr: "skripte", en: "scripting" },
@@ -366,7 +359,6 @@ const TOOLS = [
   { name: "Git", area: "tool", used: "KLMR", sr: "verzionisanje", en: "version control" },
   { name: "GitHub", area: "tool", used: "KLMR", sr: "repozitorijumi, PR", en: "repos, pull requests" },
   { name: "GitHub Actions", area: "tool", used: "KMR", sr: "CI, testovi na više verzija", en: "CI, multi-version test runs" },
-  { name: "Docker", area: "tool", used: "", sr: "multi-stage image", en: "multi-stage images" },
   { name: "npm", area: "tool", used: "KMR", sr: "paketi, workspaces", en: "packages, workspaces" },
   { name: "VS Code", area: "tool", used: "", sr: "editor, debug", en: "editor, debugging" },
   { name: "Figma", area: "tool", used: "", sr: "dizajn, prototipovi", en: "design, prototypes" }
@@ -379,9 +371,9 @@ const AREAS = {
 };
 const TOOL_TEXT = {
   sr: { core: "Glavni stack", more: "Takođe koristim", primary: "Primarni", used: "Vidi se u", soon: "Novi projekat uskoro",
-        hint: "Izaberi alat za detalje.", in: "u projektu", legend: "korišćeno u projektima" },
+        hint: "Izaberi alat za detalje.", in: "Korišćeno u", legend: "korišćeno u projektima" },
   en: { core: "Core stack", more: "Also in my toolkit", primary: "Primary", used: "Seen in", soon: "New project coming soon",
-        hint: "Pick a tool to see details.", in: "in", legend: "used in my projects" }
+        hint: "Pick a tool to see details.", in: "Used in", legend: "used in my projects" }
 };
 
 function renderTools() {
@@ -417,15 +409,15 @@ function renderTools() {
       <p class="label st-label">${text.more}</p>
       <div class="groups">${Object.keys(AREAS).map(group).join("")}</div>
     </div>
-    <p class="pt-tip" id="pt-tip" aria-live="polite"><span class="pt-legend"><i></i>${text.legend}</span><span>· ${text.hint}</span></p>`;
+    <p class="pt-tip" id="pt-tip" aria-live="polite"><span class="pt-legend"><i></i>${text.legend}.</span><span>${text.hint}</span></p>`;
 }
 
 function showTool(pill) {
   const tool = TOOLS.find(t => t.name === pill.dataset.name), text = TOOL_TEXT[lang];
   $$(".pill.on").forEach(p => p.classList.remove("on"));
   pill.classList.add("on");
-  const where = tool.used ? ` · ${text.in} <em>${tool.used.split("").map(c => PROJECTS[c][0]).join(", ")}</em>` : "";
-  $("#pt-tip").innerHTML = `<span><b>${tool.name}</b> · ${tool[lang]}${where}</span>`;
+  const where = tool.used ? `. ${text.in} <em>${tool.used.split("").map(c => PROJECTS[c][0]).join(", ")}</em>` : "";
+  $("#pt-tip").innerHTML = `<span><b>${tool.name}</b>: ${tool[lang]}${where}.</span>`;
 }
 for (const type of ["pointerover", "click", "focusin"]) {
   $("#ptable").addEventListener(type, e => {
@@ -606,58 +598,38 @@ const sectionSpy = new IntersectionObserver(entries => {
 }, { rootMargin: "-45% 0px -50% 0px" });
 ["projekti", "o-meni", "alati", "kontakt"].forEach(id => sectionSpy.observe(document.getElementById(id)));
 
-function typeLabel(el) {
-  const full = el.textContent;
-  const text = document.createTextNode("");
-  const cursor = document.createElement("span");
-  cursor.className = "cursor";
-  el.replaceChildren(text, cursor);
-  let i = 0;
-  const tick = () => {
-    if (!text.isConnected) return;
-    text.data = full.slice(0, ++i);
-    if (i < full.length) setTimeout(tick, 38 + Math.random() * 40);
-    else setTimeout(() => cursor.remove(), 1400);
+function startReels() {
+  const reels = $$(".screen img.reel");
+  const visible = new Set();
+  let frame = 0;
+
+  const update = () => {
+    frame = 0;
+    for (const img of visible) {
+      const screen = img.parentElement;
+      const box = screen.getBoundingClientRect();
+      const start = innerHeight * 0.9, end = innerHeight * 0.1;
+      const travel = img.offsetHeight - screen.clientHeight;
+      const distance = start - end + box.height;
+      const span = Math.min(distance, travel);
+      const scrolled = start - box.top - (distance - span) / 2;
+      const progress = Math.min(1, Math.max(0, scrolled / span));
+      const eased = progress < .5 ? 2 * progress * progress : 1 - (-2 * progress + 2) ** 2 / 2;
+      img.style.transform = `translate3d(0, ${-travel * eased}px, 0)`;
+    }
   };
-  setTimeout(tick, 260);
-}
+  const request = () => { if (!frame) frame = requestAnimationFrame(update); };
 
-function startScrollAnimations() {
-  const below = el => el.getBoundingClientRect().top > innerHeight * 0.85;
-
-  const revealer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.remove("pre");
-      revealer.unobserve(entry.target);
-    });
-  }, { rootMargin: "0px 0px -8% 0px" });
-  $$(".sec-head, .proj, .photo, .about-text, .facts, .ptable, .contact .wrap > *").forEach(el => {
-    el.classList.add("reveal");
-    if (below(el)) { el.classList.add("pre"); revealer.observe(el); }
+  const watcher = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));
+    request();
   });
-
-  const labelTyper = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      labelTyper.unobserve(entry.target);
-      typeLabel(entry.target);
-    });
-  }, { rootMargin: "0px 0px -12% 0px" });
-  $$(".label.blue").filter(below).forEach(el => labelTyper.observe(el));
-
-  $$(".shots").forEach(shots => {
-    shots.addEventListener("pointermove", e => {
-      if (e.pointerType !== "mouse") return;
-      const r = shots.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      shots.style.setProperty("--ry", x * 6 + "deg");
-      shots.style.setProperty("--rx", y * -4 + "deg");
-      shots.style.setProperty("--px", x * -14 + "px");
-      shots.style.setProperty("--py", y * -10 + "px");
-    });
-    shots.addEventListener("pointerleave", () => shots.removeAttribute("style"));
+  reels.forEach(img => {
+    watcher.observe(img);
+    img.addEventListener("load", request);
   });
+  addEventListener("scroll", request, { passive: true });
+  addEventListener("resize", request);
 }
 
 let toastTimer = 0;
@@ -708,12 +680,12 @@ eachTranslatable((el, key, prop) => { SR[key] = readProp(el, prop); });
 setLang("en");
 if (!reduceMotion) {
   typeCode();
-  startScrollAnimations();
+  startReels();
 }
 
 console.log(
   "%c👋 Hej, developeru!%c\nOvaj sajt radi bez frejmvorka i bez build koraka. Kod: https://github.com/nikolxdev/nikolxdev.github.io\nHi there! No framework, no build step. Source: https://github.com/nikolxdev/nikolxdev.github.io\nTip: Ctrl + K → sudo hire nikola",
-  "font: 700 16px system-ui; color: #4d8dff;", "font: 12px ui-monospace, monospace; color: #8794b4;"
+  "font: 700 16px system-ui; color: #ce2e2e;", "font: 12px ui-monospace, monospace; color: #a89f96;"
 );
 
 (function () {
