@@ -321,6 +321,7 @@ a.badge:hover { border-color: var(--ok); }
 .el-used a { font: 500 12.5px var(--f-body); color: var(--fg); text-decoration: none;
   padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); transition: border-color 200ms ease; }
 .el-used a:hover { border-color: var(--powder); }
+@media (max-width: 620px) { .el-used { gap: 8px; } .el-used a { padding: 7px 13px; font-size: 13.5px; } }
 .groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .grp { min-width: 0; padding: 16px 16px 18px; border-radius: 14px; border: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 55%, transparent); }
 .grp-h { display: flex; align-items: center; gap: 9px; margin: 0 0 14px; font: 600 14px var(--f-body); }
@@ -386,7 +387,8 @@ footer .wrap { padding-block: 26px 40px; padding-right: max(76px, env(safe-area-
   border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 footer a { color: var(--muted); text-decoration: none; }
 footer a:hover { color: var(--fg); }
-.f-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.f-links { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.f-links a { display: inline-block; padding: 8px 0; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
