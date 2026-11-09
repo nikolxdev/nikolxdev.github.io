@@ -6,7 +6,7 @@ Običan HTML, CSS i JavaScript, bez build koraka. Objavljuje se preko GitHub Pag
 
 - `index.html` – stranica
 - `css/style.css` – stilovi (tamna i svetla tema)
-- `js/main.js` – prevodi, editor, paleta komandi, forma
+- `js/main.js` – prevodi, tema, pomeranje slika projekata, forma
 - `img/` – slike projekata
 - `cv/` – CV
 

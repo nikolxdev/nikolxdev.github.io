@@ -42,7 +42,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -63,10 +63,6 @@
         <button type="button" data-lang="en" aria-pressed="true" lang="en" title="English">EN</button>
         <button type="button" data-lang="sr" aria-pressed="false" lang="sr-Latn" title="Srpski">SR</button>
       </div>
-      <button class="icon-btn cmdk-btn" id="cmdk-btn" type="button" aria-label="Komandna paleta" data-i18n-aria="k.open" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <kbd id="cmdk-kbd" aria-hidden="true">Ctrl K</kbd>
-      </button>
       <button class="icon-btn" id="mode-btn" type="button">
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -80,31 +76,17 @@
   <section class="hero" id="hero">
     <div class="wrap">
       <div class="hero-in">
-        <p class="avail" data-inspect="p.avail" data-ln="10"><span data-i18n="hero.avail">Dostupan za posao</span></p>
-        <h1 class="ime" style="--i:1" data-inspect="h1" data-ln="1">Nikola <span>Vojvodić</span></h1>
-        <p class="uloga" style="--i:2" data-inspect="p.role" data-ln="2">Full-stack developer <i aria-hidden="true">/</i> <span class="nw">React · Node.js</span></p>
-        <div class="ctas" style="--i:3">
-          <a class="btn primary" href="#projekti" data-i18n="hero.cta1">Pogledaj projekte</a>
-          <a class="btn" href="#kontakt" data-i18n="hero.cta2">Pošalji poruku</a>
+        <h1><span>Nikola</span> <span>Vojvodić</span></h1>
+        <p class="lead" style="--i:1" data-i18n="hero.lead">Full-stack developer iz Čačka. Pravim sajtove koji rade pravi posao.</p>
+        <div class="ctas" style="--i:2">
+          <a class="btn primary" href="#kontakt" data-i18n="hero.cta2">Pošalji poruku</a>
           <span class="split"><a class="btn ghost" href="cv/Nikola_Vojvodic_CV.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg><span>CV</span></a><a class="btn ghost icon" href="cv/Nikola_Vojvodic_CV.pdf" download aria-label="Preuzmi CV" data-i18n-aria="cv.dl" title="PDF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a></span>
         </div>
       </div>
-
-      <div class="editor" role="region" aria-label="Editor koda" data-i18n-aria="ed.aria">
-        <div class="ed-bar">
-          <div class="ed-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-          <div class="ed-tabs" role="tablist" aria-label="Fajlovi" data-i18n-aria="ed.files">
-            <button class="ed-tab" type="button" role="tab" id="tab-nikola" data-file="nikola" aria-selected="true" aria-controls="ed-panel"><b class="ic-js" aria-hidden="true">JS</b>nikola.js</button>
-            <button class="ed-tab" type="button" role="tab" id="tab-projects" data-file="projects" aria-selected="false" aria-controls="ed-panel" tabindex="-1"><b class="ic-json" aria-hidden="true">{}</b>projects.json</button>
-            <button class="ed-tab" type="button" role="tab" id="tab-readme" data-file="readme" aria-selected="false" aria-controls="ed-panel" tabindex="-1"><b class="ic-md" aria-hidden="true">M↓</b>README.md</button>
-          </div>
-        </div>
-        <div class="ed-body" id="ed-panel" role="tabpanel" aria-labelledby="tab-nikola" tabindex="0">
-          <div class="ed-gutter" id="ed-gutter" aria-hidden="true"></div>
-          <pre class="ed-code" id="ed-code"></pre>
-        </div>
-        <div class="ed-status" aria-hidden="true"><span>● main</span><span id="ed-pos">JavaScript · UTF-8</span></div>
-      </div>
+      <figure class="me">
+        <img src="img/nikola.webp" srcset="img/nikola-sm.webp 420w, img/nikola.webp 720w" sizes="(max-width: 940px) min(420px, 100vw), 440px"
+          width="720" height="900" alt="Nikola Vojvodić" fetchpriority="high" decoding="async">
+      </figure>
     </div>
   </section>
 
@@ -116,173 +98,103 @@
         </div>
         <p data-i18n="proj.lead">Svaki projekat možeš da otvoriš uživo i da pogledaš kompletan izvorni kod.</p>
       </div>
-
-      <div class="projects">
-        <article class="proj" id="p-rebound">
-          <div class="shots">
-            <div class="browser">
-              <div class="bar"><i></i><i></i><i></i><span class="url">nikolxdev.github.io/rebound</span></div>
-              <div class="screen"><img class="reel" src="img/reel-rebound.webp" width="1600" height="3399" alt="Rebound, početna strana" data-i18n-alt="re.altd" loading="lazy"></div>
-            </div>
-            <div class="phone"><img src="img/rebound-mobile.webp" width="500" height="1082" alt="Rebound, izbor termina na telefonu" data-i18n-alt="re.altm" loading="lazy"></div>
-          </div>
-          <div class="proj-info">
-            <span class="label" data-i18n="re.meta">Full-stack sistem za rezervacije, 2026</span>
-            <h3>Rebound</h3>
-            <div class="badges">
-              <a class="badge" href="https://github.com/nikolxdev/rebound/actions" target="_blank" rel="noopener" title="GitHub Actions"><span>tests</span><span>16 passing</span></a>
-              <span class="badge info"><span>database</span><span>PostgreSQL</span></span>
-              <span class="badge info"><span>API</span><span>Node.js</span></span>
-            </div>
-            <p data-i18n="re.desc">Rezervacija padel terena za izmišljeni klub u Čačku. Izabereš teren, dan i sat, dobiješ kod rezervacije i link za otkazivanje. Osoblje ima svoj deo sa rasporedom dana. Server je na besplatnom planu, pa prvo otvaranje posle pauze traje oko pola minuta.</p>
-            <ul class="feat">
-              <li data-i18n="re.f1">Dva termina na istom terenu ne mogu da se preklope. To proverava sama baza, i kad dvoje kliknu u istoj sekundi</li>
-              <li data-i18n="re.f2">Raspored za osoblje: rezervacije se pomeraju prevlačenjem, tereni se blokiraju za turnire. Demo nalog piše na stranici za prijavu</li>
-              <li data-i18n="re.f3">Cena zavisi od doba dana, a vreme se računa po beogradskoj zoni, i kad se menja letnje računanje vremena</li>
-              <li data-i18n="re.f4">Otkazivanje preko linka najkasnije 2 sata ranije. Mejlovi idu preko Resenda, u demo verziji stižu samo meni</li>
-              <li data-i18n="re.f5">16 testova u GitHub Actions, API testovi rade nad pravom PostgreSQL bazom</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span>
-              <span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">GSAP</span>
-            </div>
-            <div class="ctas">
-              <a class="btn primary" href="https://nikolxdev.github.io/rebound/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-                <span data-i18n="btn.live">Live pregled</span>
-              </a>
-              <a class="btn" href="https://github.com/nikolxdev/rebound" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
-                <span data-i18n="btn.gh">Kod na GitHubu</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="proj flip" id="p-morrow">
-          <div class="shots">
-            <div class="browser">
-              <div class="bar"><i></i><i></i><i></i><span class="url">nikolxdev.github.io/morrow</span></div>
-              <div class="screen"><img class="reel" src="img/morrow-page.webp" width="1600" height="4000" alt="Morrow, početna strana" data-i18n-alt="mo.altd" loading="lazy"></div>
-            </div>
-            <div class="phone"><img src="img/morrow-mobile.webp" width="500" height="1082" alt="Morrow, mobilni prikaz" data-i18n-alt="mo.altm" loading="lazy"></div>
-          </div>
-          <div class="proj-info">
-            <span class="label" data-i18n="mo.meta">3D koncept brenda, 2026</span>
-            <h3>Morrow</h3>
-            <div class="badges">
-              <a class="badge" href="https://github.com/nikolxdev/morrow/actions" target="_blank" rel="noopener" title="GitHub Actions"><span>tests</span><span>16 passing</span></a>
-              <span class="badge info"><span>three.js</span><span>0.169</span></span>
-              <span class="badge info"><span>3D models</span><span>code only</span></span>
-            </div>
-            <p data-i18n="mo.desc">Sajt za izmišljeni brend hladno ceđenih sokova iz doline Morave. Limenke su 3D, napravljene u kodu sa Three.js, bez gotovih modela i bez fotografija.</p>
-            <ul class="feat">
-              <li data-i18n="mo.f1">Red 3D limenki: srednja je pod svetlom, bočne su tamnije, a sve se ogledaju u podu</li>
-              <li data-i18n="mo.f2">Klik na limenku je okreće i otvara detalje: ukus, nutritivne vrednosti i cenu</li>
-              <li data-i18n="mo.f3">Uvod u kome se svetla pale jedno po jedno, uz sliku dok se 3D učitava</li>
-              <li data-i18n="mo.f4">Kalendar berbe po današnjem datumu i korpa koja se pamti</li>
-              <li data-i18n="mo.f5">8 Playwright testova na računaru i telefonu, bez ponovnog pokretanja palih testova</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">JavaScript</span>
-              <span class="tag">CSS3</span><span class="tag">Playwright</span><span class="tag">GitHub Actions</span>
-            </div>
-            <div class="ctas">
-              <a class="btn primary" href="https://nikolxdev.github.io/morrow/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-                <span data-i18n="btn.live">Live pregled</span>
-              </a>
-              <a class="btn" href="https://github.com/nikolxdev/morrow" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
-                <span data-i18n="btn.gh">Kod na GitHubu</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="proj" id="p-knjigoteka">
-          <div class="shots">
-            <div class="browser">
-              <div class="bar"><i></i><i></i><i></i><span class="url">nikolxdev.github.io/knjigoteka</span></div>
-              <div class="screen"><img class="reel" src="img/knjigoteka-desktop-dark.webp" width="1600" height="1915" alt="Knjigoteka, početna strana" data-i18n-alt="k.altd" loading="lazy"></div>
-            </div>
-            <div class="phone"><img src="img/knjigoteka-mobile-dark.webp" width="500" height="1082" alt="Knjigoteka, mobilni prikaz" data-i18n-alt="k.altm" loading="lazy"></div>
-          </div>
-          <div class="proj-info">
-            <span class="label" data-i18n="k.meta">PWA, diplomski rad ocenjen desetkom, 2026</span>
-            <h3>Knjigoteka</h3>
-            <div class="badges">
-              <a class="badge" href="https://github.com/nikolxdev/knjigoteka/actions" target="_blank" rel="noopener" title="GitHub Actions"><span>tests</span><span>74 passing</span></a>
-              <span class="badge info"><span>offline</span><span>ready</span></span>
-              <span class="badge info"><span>a11y</span><span>axe-core</span></span>
-            </div>
-            <p data-i18n="k.desc">Progresivna web aplikacija za pretragu knjiga iz kataloga Open Library i vođenje lične police. Radi bez interneta i instalira se na telefon i računar kao prava aplikacija.</p>
-            <ul class="feat">
-              <li data-i18n="k.f1">Pretraga sa filterima, sortiranjem i deljivim linkovima</li>
-              <li data-i18n="k.f2">Polica nacrtana kao prava biblioteka, sa ocenama, beleškama i statistikom čitanja</li>
-              <li data-i18n="k.f3">Service worker sa tri strategije keširanja, potpuno upotrebljiva bez interneta</li>
-              <li data-i18n="k.f4">Svetla i tamna tema, srpski i engleski interfejs</li>
-              <li data-i18n="k.f5">40 unit i 34 end-to-end testa, uz automatsku proveru pristupačnosti i pravi offline test</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">JavaScript</span><span class="tag">PWA</span><span class="tag">Service Worker</span>
-              <span class="tag">REST API</span><span class="tag">Playwright</span><span class="tag">axe-core</span>
-            </div>
-            <div class="ctas">
-              <a class="btn primary" href="https://nikolxdev.github.io/knjigoteka/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-                <span data-i18n="btn.live">Live pregled</span>
-              </a>
-              <a class="btn" href="https://github.com/nikolxdev/knjigoteka" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
-                <span data-i18n="btn.gh">Kod na GitHubu</span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="proj flip" id="p-last-ember">
-          <div class="shots">
-            <div class="browser">
-              <div class="bar"><i></i><i></i><i></i><span class="url">nikolxdev.github.io/last-ember</span></div>
-              <div class="screen"><img class="reel" src="img/last-ember-page.webp" width="1600" height="4000" alt="Last Ember, početna strana" data-i18n-alt="le.altd" loading="lazy"></div>
-            </div>
-            <div class="phone"><img src="img/last-ember-mobile.webp" width="500" height="1082" alt="Last Ember, mobilni prikaz" data-i18n-alt="le.altm" loading="lazy"></div>
-          </div>
-          <div class="proj-info">
-            <span class="label" data-i18n="le.meta">Koncept sajta za restoran, 2026</span>
-            <h3>Last Ember</h3>
-            <div class="badges">
-              <span class="badge info"><span>dependencies</span><span>0</span></span>
-              <span class="badge info"><span>build step</span><span>none</span></span>
-              <span class="badge info"><span>i18n</span><span>en · sr</span></span>
-            </div>
-            <p data-i18n="le.desc">Sajt za noćni burger bar u Beogradu, sa menijem, korpom i rezervacijom stola. Sve radi u browseru, bez frejmvorka i bez build koraka.</p>
-            <ul class="feat">
-              <li data-i18n="le.f1">Burger koji se slaže dok skroluješ, uz statičnu verziju za smanjen pokret</li>
-              <li data-i18n="le.f2">Meni sa pretragom, filterima, alergenima i dodacima</li>
-              <li data-i18n="le.f3">Korpa sa dostavom, promo kodovima, bakšišem i terminima preuzimanja</li>
-              <li data-i18n="le.f4">Rezervacija stola i status „otvoreno / zatvoreno” uživo</li>
-              <li data-i18n="le.f5">Ceo sajt na engleskom i srpskom</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-              <span class="tag">Responsive</span><span class="tag">i18n</span><span class="tag">localStorage</span>
-            </div>
-            <div class="ctas">
-              <a class="btn primary" href="https://nikolxdev.github.io/last-ember/" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-                <span data-i18n="btn.live">Live pregled</span>
-              </a>
-              <a class="btn" href="https://github.com/nikolxdev/last-ember" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
-                <span data-i18n="btn.gh">Kod na GitHubu</span>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
     </div>
+
+    <article class="proj" id="p-rebound">
+      <div class="wrap">
+        <div class="shots">
+          <div class="screen"><img class="reel" src="img/rebound-desktop.webp" width="1600" height="3399" alt="Rebound, početna strana" data-i18n-alt="re.altd" loading="lazy"></div>
+          <div class="phone"><img src="img/rebound-phone.webp" width="500" height="1082" alt="Rebound, izbor termina na telefonu" data-i18n-alt="re.altm" loading="lazy"></div>
+        </div>
+        <div class="proj-info">
+          <span class="label" data-i18n="re.meta">Full-stack sistem za rezervacije, 2026</span>
+          <h3>Rebound</h3>
+          <p data-i18n="re.desc">Rezervacija padel terena za izmišljeni klub u Čačku. Izabereš teren, dan i sat, dobiješ kod rezervacije i link za otkazivanje. Osoblje ima svoj deo sa rasporedom dana. Server je na besplatnom planu, pa prvo otvaranje posle pauze traje oko pola minuta.</p>
+          <ul class="feat">
+            <li data-i18n="re.f1">Dva termina na istom terenu ne mogu da se preklope. To proverava sama baza, i kad dvoje kliknu u istoj sekundi</li>
+            <li data-i18n="re.f2">Raspored za osoblje: rezervacije se pomeraju prevlačenjem, tereni se blokiraju za turnire. Demo nalog piše na stranici za prijavu</li>
+            <li data-i18n="re.f5">16 testova u GitHub Actions, API testovi rade nad pravom PostgreSQL bazom</li>
+          </ul>
+          <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Tailwind CSS</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">GSAP</span></div>
+          <div class="ctas">
+            <a class="btn primary" href="https://nikolxdev.github.io/rebound/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span data-i18n="btn.live">Live pregled</span></a>
+            <a class="btn" href="https://github.com/nikolxdev/rebound" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg><span data-i18n="btn.gh">Kod na GitHubu</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj flip" id="p-morrow">
+      <div class="wrap">
+        <div class="shots">
+          <div class="screen"><img class="reel" src="img/morrow-desktop.webp" width="1600" height="4000" alt="Morrow, početna strana" data-i18n-alt="mo.altd" loading="lazy"></div>
+          <div class="phone"><img src="img/morrow-phone.webp" width="500" height="1082" alt="Morrow, mobilni prikaz" data-i18n-alt="mo.altm" loading="lazy"></div>
+        </div>
+        <div class="proj-info">
+          <span class="label" data-i18n="mo.meta">3D koncept brenda, 2026</span>
+          <h3>Morrow</h3>
+          <p data-i18n="mo.desc">Sajt za izmišljeni brend hladno ceđenih sokova iz doline Morave. Limenke su 3D, napravljene u kodu sa Three.js, bez gotovih modela i bez fotografija.</p>
+          <ul class="feat">
+            <li data-i18n="mo.f2">Klik na limenku je okreće i otvara detalje: ukus, nutritivne vrednosti i cenu</li>
+            <li data-i18n="mo.f4">Kalendar berbe po današnjem datumu i korpa koja se pamti</li>
+            <li data-i18n="mo.f5">8 Playwright testova na računaru i telefonu, bez ponovnog pokretanja palih testova</li>
+          </ul>
+          <div class="tags"><span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">JavaScript</span><span class="tag">CSS3</span><span class="tag">Playwright</span><span class="tag">GitHub Actions</span></div>
+          <div class="ctas">
+            <a class="btn primary" href="https://nikolxdev.github.io/morrow/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span data-i18n="btn.live">Live pregled</span></a>
+            <a class="btn" href="https://github.com/nikolxdev/morrow" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg><span data-i18n="btn.gh">Kod na GitHubu</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj" id="p-knjigoteka">
+      <div class="wrap">
+        <div class="shots">
+          <div class="screen"><img class="reel" src="img/knjigoteka-desktop-dark.webp" width="1600" height="1915" alt="Knjigoteka, početna strana" data-i18n-alt="k.altd" loading="lazy"></div>
+          <div class="phone"><img src="img/knjigoteka-mobile-dark.webp" width="500" height="1082" alt="Knjigoteka, mobilni prikaz" data-i18n-alt="k.altm" loading="lazy"></div>
+        </div>
+        <div class="proj-info">
+          <span class="label" data-i18n="k.meta">PWA, diplomski rad ocenjen desetkom, 2026</span>
+          <h3>Knjigoteka</h3>
+          <p data-i18n="k.desc">Progresivna web aplikacija za pretragu knjiga iz kataloga Open Library i vođenje lične police. Radi bez interneta i instalira se na telefon i računar kao prava aplikacija.</p>
+          <ul class="feat">
+            <li data-i18n="k.f2">Polica nacrtana kao prava biblioteka, sa ocenama, beleškama i statistikom čitanja</li>
+            <li data-i18n="k.f3">Service worker sa tri strategije keširanja, potpuno upotrebljiva bez interneta</li>
+            <li data-i18n="k.f5">40 unit i 34 end-to-end testa, uz automatsku proveru pristupačnosti i pravi offline test</li>
+          </ul>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">PWA</span><span class="tag">Service Worker</span><span class="tag">REST API</span><span class="tag">Playwright</span><span class="tag">axe-core</span></div>
+          <div class="ctas">
+            <a class="btn primary" href="https://nikolxdev.github.io/knjigoteka/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span data-i18n="btn.live">Live pregled</span></a>
+            <a class="btn" href="https://github.com/nikolxdev/knjigoteka" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg><span data-i18n="btn.gh">Kod na GitHubu</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj flip" id="p-last-ember">
+      <div class="wrap">
+        <div class="shots">
+          <div class="screen"><img class="reel" src="img/last-ember-desktop.webp" width="1600" height="4000" alt="Last Ember, početna strana" data-i18n-alt="le.altd" loading="lazy"></div>
+          <div class="phone"><img src="img/last-ember-phone.webp" width="500" height="1082" alt="Last Ember, mobilni prikaz" data-i18n-alt="le.altm" loading="lazy"></div>
+        </div>
+        <div class="proj-info">
+          <span class="label" data-i18n="le.meta">Koncept sajta za restoran, 2026</span>
+          <h3>Last Ember</h3>
+          <p data-i18n="le.desc">Sajt za noćni burger bar u Beogradu, sa menijem, korpom i rezervacijom stola. Sve radi u browseru, bez frejmvorka i bez build koraka.</p>
+          <ul class="feat">
+            <li data-i18n="le.f1">Burger koji se slaže dok skroluješ, uz statičnu verziju za smanjen pokret</li>
+            <li data-i18n="le.f3">Korpa sa dostavom, promo kodovima, bakšišem i terminima preuzimanja</li>
+            <li data-i18n="le.f4">Rezervacija stola i status „otvoreno / zatvoreno” uživo</li>
+          </ul>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive</span><span class="tag">i18n</span><span class="tag">localStorage</span></div>
+          <div class="ctas">
+            <a class="btn primary" href="https://nikolxdev.github.io/last-ember/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span data-i18n="btn.live">Live pregled</span></a>
+            <a class="btn" href="https://github.com/nikolxdev/last-ember" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg><span data-i18n="btn.gh">Kod na GitHubu</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
   </section>
 
   <section class="block" id="o-meni">
@@ -293,27 +205,15 @@
         </div>
       </div>
       <div class="about">
-        <figure class="photo">
-          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>nikola.webp</span></div>
-          <div class="ph-img">
-            <img src="img/nikola.webp" srcset="img/nikola-sm.webp 420w, img/nikola.webp 720w" sizes="(max-width: 860px) min(360px, 100vw), 360px"
-              width="720" height="900" alt="Nikola Vojvodić" loading="lazy" decoding="async">
-          </div>
-          <figcaption><span>● Nikola Vojvodić</span><span data-i18n="ab.v2">Čačak, Srbija</span></figcaption>
-        </figure>
-        <div class="about-main">
         <div class="about-text">
           <p data-i18n="ab.p1">Ja sam <strong>Nikola Vojvodić</strong>, full-stack developer iz Čačka i diplomirani inženjer informacionih tehnologija (FTN Čačak, 2026). Pravim kompletne, funkcionalne web aplikacije u JavaScript-u, od <strong>sistema za rezervacije</strong> sa sopstvenim serverom i bazom, preko <strong>offline-first PWA</strong> aplikacija, do <strong>interaktivnih 3D sajtova</strong> i sajtova za lokale.</p>
           <p data-i18n="ab.p2">Svaki projekat pravim od nule, sa pažnjom na čist kod, <strong>pristupačnost i automatske testove</strong>. Svaki projekat na ovoj stranici ima verziju uživo i kompletan kod na GitHubu, a testovi se automatski pokreću pri svakoj izmeni.</p>
         </div>
         <dl class="facts">
-          <div><dt data-i18n="ab.k1">Uloga</dt><dd data-i18n="ab.v1">Full-stack developer</dd></div>
-          <div><dt data-i18n="ab.k2">Lokacija</dt><dd data-i18n="ab.v2">Čačak, Srbija</dd></div>
           <div><dt data-i18n="ab.k6">Obrazovanje</dt><dd data-i18n="ab.v6">Informacione tehnologije, Fakultet tehničkih nauka Čačak (2022–2026). Diplomski rad o PWA aplikacijama, ocena 10.</dd></div>
           <div><dt data-i18n="ab.k3">Fokus</dt><dd data-i18n="ab.v3">PWA, pristupačnost (WCAG 2.1), automatsko testiranje, React</dd></div>
           <div><dt data-i18n="ab.k4">Jezici</dt><dd data-i18n="ab.v4">Srpski (maternji), engleski (profesionalni nivo)</dd></div>
         </dl>
-        </div>
       </div>
     </div>
   </section>
@@ -324,9 +224,14 @@
         <div>
           <h2 data-i18n="t.title">Alati i tehnologije</h2>
         </div>
-        <p data-i18n="t.lead">Glavni stack na vrhu, ispod sve ostalo po oblastima. Uz svaki alat piše u kom projektu ga možeš videti.</p>
+        <p data-i18n="t.lead">Samo ono što možeš da vidiš na delu u projektima iznad.</p>
       </div>
-      <div class="ptable" id="ptable"></div>
+      <dl class="facts tools">
+        <div><dt data-i18n="t.k1">Osnova</dt><dd>JavaScript, TypeScript, HTML, CSS</dd></div>
+        <div><dt>Frontend</dt><dd data-i18n="t.v2">React, Tailwind CSS, Three.js, GSAP, PWA i service worker</dd></div>
+        <div><dt>Backend</dt><dd>Node.js, Express, PostgreSQL, REST API</dd></div>
+        <div><dt data-i18n="t.k4">Testovi i alati</dt><dd>Playwright, Vitest, node:test, axe-core, Git, GitHub Actions</dd></div>
+      </dl>
     </div>
   </section>
 
@@ -335,7 +240,7 @@
       <div>
         <h2 data-i18n="c.title">Hajde da<br>pričamo.</h2>
         <p class="lead" data-i18n="c.lead">Imaš posao, projekat ili samo pitanje? Pošalji poruku i odgovoriću u roku od jednog do dva dana.</p>
-        <div class="mail-row"><span class="label">Email</span><code id="mail">nikolavojvodic07@gmail.com</code><button type="button" id="copy-mail" data-i18n="c.copy">Kopiraj</button></div>
+        <div class="mail-row"><span class="label">Email</span><span id="mail">nikolavojvodic07@gmail.com</span><button type="button" id="copy-mail" data-i18n="c.copy">Kopiraj</button></div>
       </div>
       <form id="contact-form" action="https://formspree.io/f/mppqglyp" method="POST" novalidate>
         <div class="row2">
@@ -369,20 +274,6 @@
 
 <footer><div class="wrap"><span>© 2026 Nikola Vojvodić · Čačak · All rights reserved</span><span class="f-links"><a href="https://github.com/nikolxdev" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/nikola-vojvodi%C4%87-324a79419" target="_blank" rel="noopener">LinkedIn</a><a href="cv/Nikola_Vojvodic_CV.pdf" target="_blank" rel="noopener">CV</a></span></div></footer>
 
-<dialog class="cmdk" id="cmdk" aria-label="Komandna paleta" data-i18n-aria="k.title">
-  <div class="cmdk-search">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="cmdk-q" type="text" role="combobox" aria-expanded="true" aria-controls="cmdk-list" aria-autocomplete="list" autocomplete="off" spellcheck="false"
-      placeholder="Ukucaj komandu ili traži…" data-i18n-ph="k.ph" aria-label="Pretraga komandi" data-i18n-aria="k.qaria">
-    <kbd aria-hidden="true">Esc</kbd>
-  </div>
-  <ul class="cmdk-list" id="cmdk-list" role="listbox" aria-label="Komande" data-i18n-aria="k.list"></ul>
-  <div class="cmdk-foot" aria-hidden="true">
-    <span><kbd>↑</kbd><kbd>↓</kbd> <span data-i18n="k.move">pomeri</span></span>
-    <span><kbd>Enter</kbd> <span data-i18n="k.run">otvori</span></span>
-    <span><kbd>Esc</kbd> <span data-i18n="k.close">zatvori</span></span>
-  </div>
-</dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="js/main.js"></script>
