@@ -162,15 +162,9 @@ section.block > .wrap { padding-block: 104px 8px; }
 #p-knjigoteka { --bg: #10291f; --bg-2: #16352a; --surface: #16352a; --line: #2f5443; --fg: #e3eae5; --muted: #a9bdb2; --accent: #e6c784; --accent-hover: #f1d9a3; --accent-ink: #10291f; --powder: #e6c784; }
 #p-last-ember { --bg: #0e1328; --bg-2: #151b36; --surface: #151b36; --line: #2a3158; --fg: #f3eadb; --muted: #b9b5b8; --accent: #e0a04a; --accent-hover: #f2c36f; --accent-ink: #0e1328; --powder: #f2c36f; }
 .shots { position: relative; padding-bottom: 40px; }
-.screen { container-type: inline-size; view-timeline: --shot; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 14px; border: 1px solid var(--line); background: var(--bg-2); box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .6); }
+.screen { aspect-ratio: 16 / 10; overflow: hidden; border-radius: 14px; border: 1px solid var(--line); background: var(--bg-2); box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .6); }
 .screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .screen img.reel { height: auto; object-fit: fill; will-change: transform; }
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .screen img.reel { animation: reel linear both; animation-timeline: --shot; animation-range: cover 10% cover 90%; }
-  }
-}
-@keyframes reel { to { transform: translateY(calc(62.5cqw - 100%)); } }
 .phone { position: absolute; right: -14px; bottom: 0; width: 23%; min-width: 92px; border-radius: 20px; padding: 5px;
   background: #0a0a0a; border: 1px solid var(--line); box-shadow: 0 24px 50px -16px rgba(0, 0, 0, .55); }
 .phone img { border-radius: 15px; aspect-ratio: 390 / 844; object-fit: cover; object-position: top; width: 100%; }

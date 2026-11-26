@@ -199,8 +199,7 @@ $("#contact-form").addEventListener("submit", async e => {
 
 eachTranslatable((el, key, prop) => { SR[key] = readProp(el, prop); });
 setLang("en");
-const cssReels = CSS.supports("animation-timeline: view()");
-if (!reduceMotion && !cssReels && matchMedia("(pointer: fine)").matches) startReels();
+if (!reduceMotion && matchMedia("(pointer: fine)").matches) startReels();
 
 console.log(
   "%c👋 Hej, developeru!%c\nOvaj sajt radi bez frejmvorka i bez build koraka. Kod: https://github.com/nikolxdev/nikolxdev.github.io\nHi there! No framework, no build step. Source: https://github.com/nikolxdev/nikolxdev.github.io",
